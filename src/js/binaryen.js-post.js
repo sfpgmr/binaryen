@@ -22,6 +22,8 @@ function i32sToStack(i32s) {
   return ret;
 }
 
+function postSetup(){
+
 // Types
 Module['none'] = Module['_BinaryenTypeNone']();
 Module['i32'] = Module['_BinaryenTypeInt32']();
@@ -1584,3 +1586,4 @@ Module['setDebugInfo'] = function(on) {
 Module['setAPITracing'] = function(on) {
   return Module['_BinaryenSetAPITracing'](on);
 };
+}
