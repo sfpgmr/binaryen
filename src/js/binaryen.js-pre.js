@@ -1,8 +1,6 @@
 
-{
-  const old = Module['onRuntimeInitialized'];
-  Module['onRuntimeInitialized'] = ()=>{
-    postSetup();
-    old && old();
-  };
-}
+  var old = Module['onRuntimeInitialized'];
+Module['onRuntimeInitialized'] = function(){
+  postSetup();
+  old && old();
+};
